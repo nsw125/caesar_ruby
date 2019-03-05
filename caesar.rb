@@ -6,7 +6,7 @@ def caesar_cipher(string, shift)
         shift = -(shift.abs % 26)
     end
 
-    result = []
+    result = ''
     characters = string.split('')
     characters.each do |letter|
         if letter =~ /[A-Za-z]/
@@ -18,12 +18,11 @@ def caesar_cipher(string, shift)
                     code -= 26
                 end
             end
-            puts code.chr
-            result.push(code.chr)
+            result += code.chr
         else
-            result.push(letter)
+            result += letter
         end
     end
-    puts result.join('')
+    puts result
 
 end
