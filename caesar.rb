@@ -1,5 +1,4 @@
 def caesar_cipher(string, shift)
-    negative_shift = false
     if shift > 25
         shift = shift % 26
     elsif shift < -25
